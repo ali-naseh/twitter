@@ -1,0 +1,31 @@
+.rightSidebar {
+    background-color: white;
+    width: 18%;
+    padding: 1rem 0;
+}
+
+
+.hashtags {
+    color: #5ea9dd;
+}
+
+
+.hashtagParent {
+    margin: 0 -0.5rem;
+    width: 100%;
+
+}
+
+.hashtagParent div {
+    display: flex;
+    align-items: center;
+}
+
+.hashtagParent div img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.hashtagParent div h3 {
+    margin-left: 0.5rem;
+}
