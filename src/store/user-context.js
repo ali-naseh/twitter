@@ -2,13 +2,16 @@ import React, { createContext, useState } from "react";
 
 const UserContext = createContext({
   users: [],
+  loggedInUser: "",
   addUser: (newUser) => {},
   removeUser: (userId) => {},
-  isLoggedIn: (userId) => {},
+  logUserIn: (email, password) => {},
+  logUserOut: () => {},
 });
 
 export const UserContextProvider = (props) => {
   const [users, setUsers] = useState([]);
+  const [loggedInUser, setLoggedInUser] = useState("");
 
   const addUserHandler = (newUser) => {
     setUsers((allUsers) => {
@@ -22,15 +25,21 @@ export const UserContextProvider = (props) => {
     });
   };
 
-  const userIsLoggedInHandler = (userId) => {
-    return users.some((user) => user.id === userId);
+  const logUserInHandler = (email) => {
+    const user = users.find((user) => user.email === email);
+    setLoggedInUser(user);
+  };
+  const logUserOutHandler = () => {
+    setLoggedInUser("");
   };
 
   const context = {
-    user: users,
+    users: users,
+    loggedInUser: loggedInUser,
     addUser: addUserHandler,
     removeUser: removeUserHandler,
-    isLoggedIn: userIsLoggedInHandler,
+    logUserIn: logUserInHandler,
+    logUserOut: logUserOutHandler,
   };
 
   return (
