@@ -1,8 +1,7 @@
 import React from "react";
 
 import HashtagLists from "../../components/ Main Page/Hashtags";
-import PostForm from "../../components/ Main Page/PostForm";
-import Posts from "../../components/ Main Page/Posts";
+import MainPage from "../../components/ Main Page/MainPage";
 import Container from "../../components/UI/Container";
 import Divider from "../../components/UI/Divider";
 
@@ -11,10 +10,8 @@ const Home = () => {
     <Container>
       <HashtagLists />
       <Divider />
-      <main>
-        <PostForm/>
-        <Posts />
-      </main>
+
+      <MainPage />
     </Container>
   );
 };
