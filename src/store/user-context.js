@@ -5,7 +5,8 @@ const UserContext = createContext({
   loggedInUser: "",
   addUser: (newUser) => {},
   removeUser: (userId) => {},
-  logUserIn: (email, password) => {},
+  findUser: (email) => {},
+  logUserIn: (user) => {},
   logUserOut: () => {},
 });
 
@@ -25,10 +26,14 @@ export const UserContextProvider = (props) => {
     });
   };
 
-  const logUserInHandler = (email) => {
-    const user = users.find((user) => user.email === email);
+  const findUserHandler = (email) => {
+    return users.find((user) => user.email === email);
+  };
+
+  const logUserInHandler = (user) => {
     setLoggedInUser(user);
   };
+
   const logUserOutHandler = () => {
     setLoggedInUser("");
   };
@@ -38,6 +43,7 @@ export const UserContextProvider = (props) => {
     loggedInUser: loggedInUser,
     addUser: addUserHandler,
     removeUser: removeUserHandler,
+    findUser: findUserHandler,
     logUserIn: logUserInHandler,
     logUserOut: logUserOutHandler,
   };

@@ -4,6 +4,19 @@
     width: 50%;
 }
 
+.error {
+    background-color: #ff5151;
+    color: #9b1818;
+    height: 35px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 .form {
     text-align: center;
 }

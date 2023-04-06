@@ -1,23 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../../../store/user-context";
+import Button from "../Button";
 
 import classes from "./Header.module.css";
 
-// eslint-disable-next-line
-// const COLOR="#0bd2f5";
-
 const Header = () => {
+  const userCtx = useContext(UserContext);
+
+  const loggedInUser = userCtx.loggedInUser;
+
+  const logoutHandler = () => {
+    userCtx.logUserOut();
+  };
+
   return (
     <header className={classes.header}>
-      <div><Link to="/">Twitter</Link></div>
+      <div>
+        <Link to="/">Twitter</Link>
+      </div>
       <nav>
         <ul>
-          <li>
-            <Link to="/login">SignIn</Link>
-          </li>
-          <li>
-            <Link to="/register">SignUp</Link>
-          </li>
+          {!loggedInUser && (
+            <li>
+              <Link to="/login">SignIn</Link>
+            </li>
+          )}
+          {!loggedInUser && (
+            <li>
+              <Link to="/register">SignUp</Link>
+            </li>
+          )}
+          {loggedInUser && (
+            <li>
+              <Button onClick={logoutHandler}>Log Out</Button>
+            </li>
+          )}
+
           <li>
             <Link to="/about">About</Link>
           </li>
