@@ -1,0 +1,47 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+
+}
+
+.right {
+    margin: auto;
+
+}
+
+.right h2 {
+    font-size: 2rem;
+    font-weight: 650;
+    color: #5ea9dd;
+    width: 50%;
+}
+
+.right p{
+    color: dimgray;
+    width: 80%;
+}
+
+
+
+.left div.feature{
+    display: flex;
+}
+
+.left div.feature img{
+    width: 100px;
+    height: 100px;
+    background-color: #5ea9dd;
+    border-radius: 7px;
+    margin: auto;
+    margin-right: 65px;
+}
+
+.left div.feature div h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #6bb7ee;
+}
+.left div.feature div p{
+    color: #6e6969;
+}
