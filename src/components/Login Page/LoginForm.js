@@ -42,7 +42,7 @@ const LoginForm = () => {
           <input type="password" placeholder="Password" ref={passwordRef} />
         </div>
         <div>
-          <Button type="submit">submit</Button>
+          <Button type="submit">LogIn</Button>
         </div>
       </form>
     </Card>

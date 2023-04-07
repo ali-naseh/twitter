@@ -28,9 +28,10 @@
     text-align: left;
 }
 
-.content p{
+.content p {
     font-size: 1.2rem;
 }
-.content small{
+
+.content small {
     color: #6d6d6d;
 }

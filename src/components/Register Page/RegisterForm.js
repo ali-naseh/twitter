@@ -79,7 +79,7 @@ const RegisterForm = () => {
           />
         </div>
         <div>
-          <Button type="submit">submit</Button>
+          <Button type="submit">SignUp</Button>
         </div>
       </form>
     </Card>

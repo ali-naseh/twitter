@@ -12,7 +12,7 @@ const UserContext = createContext({
 
 export const UserContextProvider = (props) => {
   const [users, setUsers] = useState([]);
-  const [loggedInUser, setLoggedInUser] = useState("");
+  const [loggedInUser, setLoggedInUser] = useState(null);
 
   const addUserHandler = (newUser) => {
     setUsers((allUsers) => {
