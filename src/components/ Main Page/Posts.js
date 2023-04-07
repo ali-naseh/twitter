@@ -6,7 +6,7 @@ const Posts = (prop) => {
   return (
     <>
       {prop.posts.map((post) => (
-        <PostItem post={post} />
+        <PostItem key={post.id} post={post} />
       ))}
     </>
   );
