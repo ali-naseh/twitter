@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import classes from "./MainPage.module.css";
-import PostForm from "./PostForm";
-import Posts from "./Posts";
+import PostForm from "../Posts/PostForm";
+import Posts from "../Posts/Posts";
 
 const DUMMY_POSTS = [
   {

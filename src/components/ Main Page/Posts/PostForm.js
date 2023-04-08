@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
-import UserContext from "../../store/user-context";
+import UserContext from "../../../store/user-context";
 
-import Button from "../UI/Button";
+import Button from "../../UI/Button";
 
 import classes from "./PostForm.module.css";
 import { useNavigate } from "react-router-dom";
