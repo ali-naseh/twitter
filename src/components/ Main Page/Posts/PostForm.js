@@ -44,7 +44,7 @@ const PostForm = (props) => {
 
       props.onAdd(newPost);
     } else {
-      navigate("/login");
+      navigate("/register");
     }
   };
 

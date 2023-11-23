@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 const UserContext = createContext({
   users: [],
@@ -10,14 +10,32 @@ const UserContext = createContext({
   logUserOut: () => {},
 });
 
+const initialCurrUserValue = () => {
+  const currUser = localStorage.getItem("user");
+  return currUser ? JSON.parse(currUser) : {};
+};
+const initialUsersValue = () => {
+  const allUsers = localStorage.getItem("users");
+  return allUsers ? JSON.parse(allUsers) : [];
+};
+
 export const UserContextProvider = (props) => {
-  const [users, setUsers] = useState([]);
-  const [loggedInUser, setLoggedInUser] = useState(null);
+  const [users, setUsers] = useState(initialUsersValue);
+  const [loggedInUser, setLoggedInUser] = useState(initialCurrUserValue);
+
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(loggedInUser));
+  }, [loggedInUser]);
+
+  useEffect(() => {
+    localStorage.setItem("users", JSON.stringify(users));
+  }, [users]);
 
   const addUserHandler = (newUser) => {
     setUsers((allUsers) => {
       return allUsers.concat(newUser);
     });
+    logUserInHandler(newUser);
   };
 
   const removeUserHandler = (userId) => {

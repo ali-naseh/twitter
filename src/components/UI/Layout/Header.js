@@ -31,15 +31,24 @@ const Header = () => {
               <Link to="/register">SignUp</Link>
             </li>
           )}
+
+          {!loggedInUser && (
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          )}
+
+          {loggedInUser && (
+            <li>
+              <p>{loggedInUser.name}</p>
+            </li>
+          )}
+
           {loggedInUser && (
             <li>
               <Button onClick={logoutHandler}>Log Out</Button>
             </li>
           )}
-
-          <li>
-            <Link to="/about">About</Link>
-          </li>
         </ul>
       </nav>
     </header>

@@ -49,7 +49,7 @@ const RegisterForm = () => {
             email: enteredEmail,
             password: enteredPassword,
           });
-          navigate("/login");
+          navigate("/");
         }
       }
     }

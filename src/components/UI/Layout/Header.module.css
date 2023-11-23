@@ -1,34 +1,45 @@
 .header {
-    width: 100%;
-    height: 60px;
-    background-color: #a9c5ca;
-    opacity: 0.8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #a9c5ca;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header div {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-left: 12rem;
-    color: #2077fa;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 12rem;
+  color: #2077fa;
 }
 
 .header div a {
-    text-decoration: none;
-    color: #2077fa;
+  text-decoration: none;
+  color: #2077fa;
 }
 
 .header ul {
-    font-size: 1.2rem;
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin-right: 12rem;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin-right: 12rem;
+  align-items: center;
 }
 
 .header ul li a {
-    text-decoration: none;
-    color: #2e39dd;
+  text-decoration: none;
+  color: #2e39dd;
+}
+
+.header ul li p {
+  text-decoration: none;
+  color: #2e39dd;
+  text-align: center;
+  margin: 0;
+  border: rgb(104, 78, 165) 2px solid;
+  padding: 5px;
+  border-radius: 50%;
 }

@@ -1,37 +1,50 @@
 .user {
-    display: flex;
+  display: flex;
 }
 
 .user img {
-    margin-top: 3px;
-    margin-right: 5px;
-    height: 2.9rem;
-    width: 2.9rem;
+  margin-top: 3px;
+  margin-right: 5px;
+  height: 2.9rem;
+  width: 2.9rem;
 }
 
 .user div {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 .user div h3 {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 800;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
 }
 
 .user div p {
-    margin: 0;
-    width: 100%;
+  margin: 0;
+  width: 100%;
 }
 
 .content {
-    text-align: left;
+  text-align: left;
 }
 
 .content p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.content div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .content small {
-    color: #6d6d6d;
+  color: #6d6d6d;
+}
+
+.content button {
+  background-color: #f53535c0;
+  border: none;
+  padding: 10px;
+  color: azure;
+  border-radius: 8px;
 }

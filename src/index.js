@@ -4,12 +4,15 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import { UserContextProvider } from "./store/user-context";
+import { PostsContextProvider } from "./store/posts-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <UserContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <PostsContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </PostsContextProvider>
   </UserContextProvider>
 );
