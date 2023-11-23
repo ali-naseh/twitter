@@ -48,3 +48,8 @@
   color: azure;
   border-radius: 8px;
 }
+
+.content button:hover {
+  background-color: #ff6464c0;
+  cursor: pointer;
+}
